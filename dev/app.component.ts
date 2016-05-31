@@ -1,16 +1,22 @@
 import { Component, OnInit } from '@angular/core';
+import {Hero} from '/heroes/hero';
 
 @Component({
     selector: 'my-app',
     template: `
-        <h1>Mi primera aplicación Angular 2</h1>
-        <h2>{{ nombre }}</h2>
+        <h1>{{title}}</h1><h2>{{hero.name}} details!</h2>
     `
 })
+
 export class AppComponent implements OnInit {
-    private nombre: string;
+    
+    title = 'Tour of Heroes';
+    hero: Hero  = {
+        id: 1,
+        name: 'Windstorm'
+    };
+    
     constructor() { }
-        nombre = 'Ppe';
     ngOnInit() { }
 
 }
