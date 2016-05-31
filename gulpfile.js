@@ -35,3 +35,5 @@ gulp.task("typescript", function () {
 // });
 
 // gulp.task("default", ["watch"]);
+
+gulp.task('default', ['watchFiles']);
